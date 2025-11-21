@@ -1,0 +1,2 @@
+#strängar
+string = "test"
