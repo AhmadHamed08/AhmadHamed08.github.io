@@ -1,2 +1,0 @@
-#strängar
-string = "test"
