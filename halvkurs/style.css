@@ -30,6 +30,32 @@ button{
     display: none;
 }
 
+.card{
+    border: 1px solid rgb(31, 29, 29);
+    padding: 3%;
+}
+
+.card a{
+    font-size: 1.5rem;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.imgBox{
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+}
+
+main{
+    display: grid;
+    gap: 20px;
+}
+
 @media(min-width:600px){
     #nav{
         display: grid;
@@ -39,5 +65,9 @@ button{
 
     button{
         display: none;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
     }
 }
