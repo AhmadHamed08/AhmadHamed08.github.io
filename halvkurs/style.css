@@ -10,14 +10,19 @@ header, main, footer, nav{
     min-height: 10vh;
 }
 
+header{
+    background-color: rgb(44, 42, 42);
+}
+
 nav{
     display: grid;
     gap: 20px;
+    background-color: rgb(160, 160, 160);
 }
 
 a{
     text-decoration: none;
-    color: rgb(24, 23, 23);
+    color: black;
 }
 
 button{
@@ -33,6 +38,7 @@ button{
 .card{
     border: 1px solid rgb(31, 29, 29);
     padding: 3%;
+    background-color: rgb(160, 160, 160);
 }
 
 .card a{
@@ -54,6 +60,7 @@ img{
 main{
     display: grid;
     gap: 20px;
+    background-color: rgb(44, 42, 42);
 }
 
 .other_main h3{
@@ -72,6 +79,21 @@ footer p{
 
 .row a{
     text-align: right;
+}
+
+footer{
+    background-color: rgb(44, 42, 42);
+}
+
+footer #CONTACT{
+    background-color: rgb(160, 160, 160);
+    padding: 3%;
+}
+
+.index_main{
+    display: grid;
+    grid-template-columns: repeat(2, 60vw);
+    overflow-x: scroll;
 }
 
 @media(min-width:600px){
