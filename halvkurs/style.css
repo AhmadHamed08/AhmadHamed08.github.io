@@ -29,6 +29,7 @@ button{
     font-size: 2rem;
     background-color: transparent;
     border: none;
+    color: rgb(160, 160, 160);
 }
 
 .hidden{
@@ -100,6 +101,16 @@ footer #CONTACT{
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
+
+.about_main{
+    min-height: 60vh;
+}
+
+.about_main h3{
+    color: rgb(160, 160, 160);
+}
+
+
 
 @media(min-width:600px){
     #nav{
