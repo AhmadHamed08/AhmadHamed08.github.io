@@ -9,11 +9,7 @@ header, main, footer, nav{
     padding: 3%;
     min-height: 10vh;
 }
-footer{
-    min-height: 30vh;
-    display: grid;
-    align-items: end;
-}
+
 header{
     background-color: rgb(44, 42, 42);
 }
@@ -29,9 +25,6 @@ a{
     color: black;
 }
 
-
-
-
 button{
     font-size: 2rem;
     background-color: transparent;
@@ -46,6 +39,7 @@ button{
     border: 1px solid rgb(31, 29, 29);
     padding: 3%;
     background-color: rgb(160, 160, 160);
+    scroll-snap-align: center;
 }
 
 .card a{
@@ -90,6 +84,9 @@ footer p{
 
 footer{
     background-color: rgb(44, 42, 42);
+    min-height: 30vh;
+    display: grid;
+    align-items: end;
 }
 
 footer #CONTACT{
@@ -99,12 +96,9 @@ footer #CONTACT{
 
 .index_main{
     display: grid;
-    grid-template-columns: repeat(4, 80vw);
+    grid-template-columns: repeat(4, 85vw);
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-}
-.card{
-    scroll-snap-align: center;
 }
 
 @media(min-width:600px){
