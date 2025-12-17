@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Template</title>
+    <script src="main.js" defer></script>
+    <style>
+        *{box-sizing: border-box; margin: 0; font-family: system-ui;}
+        header, main, footer, nav{border:1px solid black; padding:5%; }
+        img{width:100%;}
+
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav data-type="nav">
+                <button data-page=".home">HOME</button>
+                <button data-page=".about">ABOUT</button>
+                <button data-page=".contact">CONTACT</button>
+                <button data-page=".faq">FAQ</button>
+                <button data-page=".shop">SHOP</button>
+                <button data-page=".extra">EN SIDA TILL</button>
+        </nav>
+    </header>
+    <main>
+        <div class="content home">HOME</div>
+        <div class="content hidden about">ABOUT</div>
+        <div class="content hidden contact">CONTACT</div>
+        <div class="content hidden faq">FAQ</div>
+        <div class="content hidden shop">SHOP</div>
+        <div class="content hidden extra">EXTRA</div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
