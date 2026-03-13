@@ -8,6 +8,8 @@ function App(){
 
             <Footer></Footer>
 
+            <Ahmad></Ahmad>
+
         </div>
 
     )
@@ -21,6 +23,14 @@ function Header(){
                 <a href="#contact">CONTACT</a>
             </nav>
         </header>
+    )
+}
+
+function Ahmad(){
+    return(
+
+        <h2>Ahmad</h2>
+
     )
 }
 

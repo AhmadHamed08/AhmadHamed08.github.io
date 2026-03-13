@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    border: 1px solid rgb(31, 29, 29);
+    padding: 3%;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.imgBox{
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+}
+
+.card .text{
+    padding: 3%;
+}

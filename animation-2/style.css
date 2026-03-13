@@ -1,0 +1,36 @@
+:root{
+    --w:280px;
+    --h:200px;
+}
+
+
+.box{
+    width: var(--w);
+    height: var(--h);
+    background-color: red;
+    animation: square 2s linear infinite;
+}
+
+*{
+    margin:0;
+}
+
+@keyframes square {
+    
+    25%{
+        transform: translateX(calc(100vw - var(--w)));
+    }
+
+    50%{
+        transform: translateY(calc(100vh - var(--h))) translateX(calc(100vw - var(--w)));
+    }
+
+    75%{
+        transform: translateX(0) translateY(calc(100vh - var(--h)));
+    }
+
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+
+}
