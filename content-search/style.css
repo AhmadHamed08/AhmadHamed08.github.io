@@ -1,0 +1,16 @@
+
+
+.content{
+    border: 1px solid grey;
+    padding: 4%;
+}
+
+.hidden{
+    display: none;
+}
+
+input{
+    box-sizing: border-box;
+    padding: 4%;
+    font-size: 1.4rem;
+}
