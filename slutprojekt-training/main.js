@@ -1,24 +1,9 @@
 function App(){
     return(
         <div className="app">
-            <Header></Header>
             <Router></Router>
-            <Main></Main>
-            <About></About>
             <Footer></Footer>
         </div>
-    )
-}
-
-function Header(){
-    return(
-        <header>
-            <nav>
-                <a href="#home">HOME</a>
-                <a href="#contact">CONTACT</a>
-                <a href="#about">ABOUT</a>
-            </nav>
-        </header>
     )
 }
 
@@ -26,6 +11,13 @@ function Main(){
     return(
         <main className="content" id = "home">
             <h3>MAIN</h3>
+
+            <div className="card">
+                <div className="imgBox">
+                    <img src="test.jpg" alt="" />
+                </div>
+                <h3>Testing....</h3>
+            </div>
         </main>
     )
 }
@@ -49,25 +41,24 @@ function Footer(){
 
 
 function Router(){
-    const [page, setPage] = React.useState("test")
+    const [page, setPage] = React.useState("home")
     return(
         <div className="box">
 
-            <button onClick={()=>setPage("home")}>HOME</button>
-            <button onClick={()=>setPage("about")}>ABOUT</button>
-            <button onClick={()=>setPage("test")}>TEST</button>
+            <div className="nav">
+                <a href = "#" onClick={()=>setPage("home")} >HOME</a>
+                <a href = "#" onClick={()=>setPage("about")} >ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </div>
 
-            {page == "home" ? <h2>HOME</h2> : ""}
-            {page == "about" ? <h2>ABOUT</h2> : ""}
-            {page == "test" ? <h2>TEST</h2> : ""}
+            {page == "home" ? <Main></Main> : ""}
+            {page == "about" ? <About></About> : ""}
         
         </div>
     )
 
 
 }
-
-
 
 const el = document.querySelector("#root");
 ReactDOM.createRoot(el).render(<App></App>)
