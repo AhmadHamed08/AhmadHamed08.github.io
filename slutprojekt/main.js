@@ -11,19 +11,20 @@ function Main() {
 
 
     const products =[
-        {id:"id_3", img:"test.jpg", text:"Detta är produkt 1"},
-        {id:"id_4", img:"test.jpg", text:"Detta är produkt 2"},
-        {id:"id_55", img:"test.jpg", text:"Detta är produkt 3"},
-        {id:"id_77", img:"test.jpg", text:"Detta är produkt 4"},
-        {id:"id_9", img:"test.jpg", text:"Detta är produkt 5"},
-        {id:"id_3h4", img:"test.jpg", text:"Detta är produkt 6"},
+        {id:"id_1", img:"test.jpg", text:"Detta är produkt 1"},
+        {id:"id_2", img:"test.jpg", text:"Detta är produkt 2"},
+        {id:"id_3", img:"test.jpg", text:"Detta är produkt 3"},
+        {id:"id_4", img:"test.jpg", text:"Detta är produkt 4"},
+        {id:"id_5", img:"test.jpg", text:"Detta är produkt 5"},
+        {id:"id_6", img:"test.jpg", text:"Detta är produkt 6"},
     ];
 
     return (
         <main className="content" id="home">
-            <h3>MAIN</h3>
-        
-        
+            
+            {products.map(p=>(
+                <Card product = {p} ></Card>
+            ))}
 
         </main>
     )
@@ -67,14 +68,18 @@ function Router() {
 
 }
 
-function Card({img, text}) {
+function Card({product}) {
 
     return (
-        <div className="card">
-            <div className="imgBox">
-                <img src={img} alt="" />
+        <div id={product.id}>
+
+            <div className="card">
+                <div className="imgBox">
+                    <img src={product.img} alt="" />
+                </div>
+                <h3>{product.text}</h3>
             </div>
-            <h3>{text}</h3>
+
         </div>
     )
 

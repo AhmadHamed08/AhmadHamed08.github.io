@@ -28,6 +28,12 @@ Main, Footer{
     min-height: 10vh;
 }
 
+Main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
 .card{
     border: 1px solid black;
     padding: 3%;
