@@ -5,11 +5,9 @@
 }
 
 .box .nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     border: 1px solid black;
     padding: 3%;
-
+    gap: 10px;
     justify-items: center;
 }
 
@@ -30,13 +28,18 @@ Main, Footer{
 
 Main{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
 .card{
     border: 1px solid black;
     padding: 3%;
+}
+
+.card h3{
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .imgBox{
@@ -47,6 +50,22 @@ Main{
 
 .imgBox img{
     display: block;
+    object-fit: cover;
     aspect-ratio: 1/1;
     width: 100%;
+}
+
+@media(min-width: 600px){
+    Main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card h3{
+        font-size: clamp(1rem, 3vw, 2rem);
+    }
+
+    .box .nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

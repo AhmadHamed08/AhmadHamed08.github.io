@@ -11,12 +11,12 @@ function Main() {
 
 
     const products =[
-        {id:"id_1", img:"test.jpg", text:"Detta är produkt 1"},
-        {id:"id_2", img:"test.jpg", text:"Detta är produkt 2"},
-        {id:"id_3", img:"test.jpg", text:"Detta är produkt 3"},
-        {id:"id_4", img:"test.jpg", text:"Detta är produkt 4"},
-        {id:"id_5", img:"test.jpg", text:"Detta är produkt 5"},
-        {id:"id_6", img:"test.jpg", text:"Detta är produkt 6"},
+        {id:"id_1", img:"coffee.jpg", text:"Premium kaffe från småskaliga rosterier"},
+        {id:"id_2", img:"headphones.jpg", text:"Trådlösa hörlurar med brusreducering"},
+        {id:"id_3", img:"backpack.jpg", text:"Stilren ryggsäck för vardag och resa"},
+        {id:"id_4", img:"watch.jpg", text:"Minimalistisk klocka i rostfritt stål"},
+        {id:"id_5", img:"shoes.jpg", text:"Bekväma sneakers för alla tillfällen"},
+        {id:"id_6", img:"lamp.jpg", text:"Modern bordslampa med varm belysning"},
     ];
 
     return (
