@@ -10,20 +10,20 @@ function App() {
 function Main() {
 
 
-    const products =[
-        {id:"id_1", img:"coffee.jpg", text:"Premium kaffe från småskaliga rosterier"},
-        {id:"id_2", img:"headphones.jpg", text:"Trådlösa hörlurar med brusreducering"},
-        {id:"id_3", img:"backpack.jpg", text:"Stilren ryggsäck för vardag och resa"},
-        {id:"id_4", img:"watch.jpg", text:"Minimalistisk klocka i rostfritt stål"},
-        {id:"id_5", img:"shoes.jpg", text:"Bekväma sneakers för alla tillfällen"},
-        {id:"id_6", img:"lamp.jpg", text:"Modern bordslampa med varm belysning"},
+    const products = [
+        { id: "id_1", img: "coffee.jpg", text: "Premium kaffe från småskaliga rosterier" },
+        { id: "id_2", img: "headphones.jpg", text: "Trådlösa hörlurar med brusreducering" },
+        { id: "id_3", img: "backpack.jpg", text: "Stilren ryggsäck för vardag och resa" },
+        { id: "id_4", img: "watch.jpg", text: "Minimalistisk klocka i rostfritt stål" },
+        { id: "id_5", img: "shoes.jpg", text: "Bekväma sneakers för alla tillfällen" },
+        { id: "id_6", img: "lamp.jpg", text: "Modern bordslampa med varm belysning" },
     ];
 
     return (
         <main className="content" id="home">
-            
-            {products.map(p=>(
-                <Card product = {p} ></Card>
+
+            {products.map(p => (
+                <Card product={p} ></Card>
             ))}
 
         </main>
@@ -50,13 +50,16 @@ function Footer() {
 
 function Router() {
     const [page, setPage] = React.useState("home")
+    const [menuOpen, setMenuOpen] = React.useState(false)
+
     return (
         <div className="box">
-
             <div className="nav">
-                <a href="#" onClick={() => setPage("home")} >HOME</a>
-                <a href="#" onClick={() => setPage("about")} >ABOUT</a>
-                <a href="#contact">CONTACT</a>
+                <button class="menuButton" onClick={() => setMenuOpen(!menuOpen)}>&equiv;</button>
+                
+                <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("home")} >HOME</a>
+                <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("about")} >ABOUT</a>
+                <a href="#contact" className={menuOpen ? "show" : ""}>CONTACT</a>
             </div>
 
             {page == "home" ? <Main></Main> : ""}
@@ -64,23 +67,18 @@ function Router() {
 
         </div>
     )
-
-
 }
 
-function Card({product}) {
+function Card({ product }) {
 
     return (
-        <div id={product.id}>
-
-            <div className="card">
+            <div className="card" id={product.id}>
                 <div className="imgBox">
                     <img src={product.img} alt="" />
                 </div>
                 <h3>{product.text}</h3>
             </div>
-
-        </div>
+       
     )
 
 }
