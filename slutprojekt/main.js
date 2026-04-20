@@ -53,19 +53,22 @@ function Router() {
     const [menuOpen, setMenuOpen] = React.useState(false)
 
     return (
-        <div className="box">
-            <div className="nav">
-                <button class="menuButton" onClick={() => setMenuOpen(!menuOpen)}>&equiv;</button>
+        <>
+            <div className="box">
                 
-                <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("home")} >HOME</a>
-                <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("about")} >ABOUT</a>
-                <a href="#contact" className={menuOpen ? "show" : ""}>CONTACT</a>
+                <button class="menuButton" onClick={() => setMenuOpen(!menuOpen)}>&equiv;</button>
+                <div className="nav">
+                    
+                    <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("home")} >HOME</a>
+                    <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("about")} >ABOUT</a>
+                    <a href="#contact" className={menuOpen ? "show" : ""}>CONTACT</a>
+
+                </div>
             </div>
 
-            {page == "home" ? <Main></Main> : ""}
+            {page == "home" ? <Main></Main> : ""} 
             {page == "about" ? <About></About> : ""}
-
-        </div>
+        </>
     )
 }
 
