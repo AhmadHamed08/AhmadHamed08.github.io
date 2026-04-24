@@ -54,14 +54,14 @@ function Router() {
 
     return (
         <>
-            <div className="box">
+            <div className="header">
                 
-                <button class="menuButton" onClick={() => setMenuOpen(!menuOpen)}>&equiv;</button>
-                <div className="nav">
+                <button className="menuButton" onClick={() => setMenuOpen(!menuOpen)}>&equiv;</button>
+                <div className={menuOpen ? "hidden" : "nav"}>
                     
-                    <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("home")} >HOME</a>
-                    <a href="#" className={menuOpen ? "show" : ""} onClick={() => setPage("about")} >ABOUT</a>
-                    <a href="#contact" className={menuOpen ? "show" : ""}>CONTACT</a>
+                    <a href="#" className={menuOpen ? "" : "show"} onClick={() => setPage("home")} >HOME</a>
+                    <a href="#" className={menuOpen ? "" : "show"} onClick={() => setPage("about")} >ABOUT</a>
+                    <a href="#contact" className={menuOpen ? "" : "show"}>CONTACT</a>
 
                 </div>
             </div>

@@ -14,14 +14,10 @@ main, Footer, .header, .nav{
     display: grid;
     gap: 20px;
     width: 100%;
-    height: 20vh;
-    transition: all 1s;
 }
 
 .hidden{
-    transition: all 1s;
     height: 0;
-    margin-left: -100vw;   
 }
 
 .header a{
@@ -89,13 +85,22 @@ main{
     }
 
     .header .nav{
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
-        gap: 10px;
+        place-items: center;
     }
 
-    .header a{
+    .hidden{
+        border: 1px solid black;
+        padding: 3%;
+        min-height: 10vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        gap: 20px;
+    }
+
+    .hidden a{
         display: block;
     }
+    
 }
