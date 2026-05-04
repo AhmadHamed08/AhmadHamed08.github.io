@@ -19,7 +19,9 @@ function Main() {
         { id: "id_6", img: "lamp.jpg", text: "Modern bordslampa med varm belysning" },
     ];
 
+
     return (
+
         <main className="content" id="home">
 
             {products.map(p => (
@@ -29,6 +31,7 @@ function Main() {
         </main>
     )
 }
+
 function About() {
     return (
         <main className="content" id="about">
