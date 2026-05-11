@@ -16,6 +16,7 @@ main, Footer, .header, .nav{
     width: 100%;
 }
 
+
 .hidden{
     height: 0;
 }
@@ -54,6 +55,11 @@ main{
     gap:0.5rem;
 }
 
+.card h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .card h3{
     text-align: center;
     font-size: 1.5rem;
@@ -72,17 +78,26 @@ main{
 }
 
 .more{
-    position: absolute;
+    position: fixed;
+    padding-inline: 3%;
     width:100%;
-    min-height:100vh;
+    min-height: 100vh;
     background-color: white;
     top:0px;
     left:0;
 }
 
+button{
+    width: fit-content;
+}
+
 @media(min-width: 600px){
     .menuButton{
         display: none;
+    }
+
+    .more{
+        padding-inline: 10%;
     }
 
     main{
@@ -112,4 +127,20 @@ main{
         display: block;
     }
     
+}
+
+@media(min-width: 800px){
+
+    .more{
+        padding-inline: 25%;
+    }
+
+}
+
+@media(min-width: 1300px){
+
+    .more{
+        padding-inline: 35%;
+    }
+
 }
