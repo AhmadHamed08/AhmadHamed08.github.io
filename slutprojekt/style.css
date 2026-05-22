@@ -91,6 +91,10 @@ button{
     width: fit-content;
 }
 
+#about{
+    display: block;
+}
+
 @media(min-width: 600px){
     .menuButton{
         display: none;

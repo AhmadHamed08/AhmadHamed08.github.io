@@ -35,7 +35,8 @@ function Main() {
 function About() {
     return (
         <main className="content" id="about">
-            <h3>ABOUT</h3>
+            <h2>Om Oss:</h2>
+            <h3>Vi erbjuder noggrant utvalda produkter med fokus på kvalitet, design och funktion. Vårt mål är att skapa en enkel och trygg shoppingupplevelse där du alltid hittar något som passar din stil och vardag. Tack för att du handlar hos oss!</h3>
         </main>
     )
 }
@@ -44,7 +45,8 @@ function Footer() {
     return (
         <footer>
             <div id="contact">
-                <h3>CONTACT</h3>
+                <h4>Email:</h4>
+                <p><a href="mailto:ahmham0811@edu.halmstad.se">ahmham0811@edu.halmstad.se</a></p>
             </div>
         </footer>
     )
